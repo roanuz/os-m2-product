@@ -4,15 +4,26 @@
   "type": "magento2-module",
   "version": "0.0.1",
   "license": [
-    "OSL-3.0",
-    "AFL-3.0"
+      "OSL-3.0",
+      "AFL-3.0"
+  ],
+  "require": {
+      "php": "~7.4.0"
+  },
+  "authors": [
+      {
+          "name": "Roanuz",
+          "email": "support@roanuz.com",
+          "homepage": "https://www.roanuz.com/",
+          "role": "Developer"
+      }
   ],
   "autoload": {
-    "files": [
-      "registration.php"
-    ],
-    "psr-4": {
-      "product\\gateway\\": ""
-    }
+      "files": [
+          "registration.php"
+      ],
+      "psr-4": {
+        "Roanuz\\Product\\": ""
+      }
   }
 }
