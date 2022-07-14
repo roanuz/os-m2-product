@@ -56,9 +56,9 @@ class AttributeList implements ResolverInterface
                                 if ($attribute->getFrontend()->getValue($product) && $attribute->getFrontend()->getValue($product) != '' && $attribute->getFrontend()->getValue($product) != $no) {
                                     $value = $attribute->getFrontend()->getValue($product);
                                     $attributes[] = array(
-                                        'attributeLabel' => $attribute->getStoreLabel(),
-                                        'attributeCode' => $attribute->getAttributeCode(),
-                                        'attributeValue' => $value,
+                                        'label' => $attribute->getStoreLabel(),
+                                        'code' => $attribute->getAttributeCode(),
+                                        'value' => $value,
                                     );
                                 }
                             }
@@ -67,8 +67,8 @@ class AttributeList implements ResolverInterface
                 }
                 if (!empty($attributes)) {
                     $attributeList[] = array(
-                        'attributeGroup' => $groupName,
-                        'attributes' => $attributes,
+                        'group' => $groupName,
+                        'attribute' => $attributes,
                     );
                 }
             }
@@ -78,7 +78,7 @@ class AttributeList implements ResolverInterface
             throw new GraphQlNoSuchEntityException(__($exception->getMessage()));
         }
         $response = array(
-            'attributeList' => $attributeList,
+            'rzAttributeList' => $attributeList,
         );
 
         return $attributeList;
