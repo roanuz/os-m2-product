@@ -2,15 +2,15 @@ interface ProductInterface
 @typeResolver(class: "Magento\\CatalogGraphQl\\Model\\ProductInterfaceTypeResolverComposite")
 @doc(description: "comment for ProductInterface")
  {
-    rzAttributeList : [RZProductAttributes] @resolver(class: "\\Roanuz\\Product\\Model\\Resolver\\Product\\AttributeList")
+    rzAttributeList : [RZProductList] @resolver(class: "\\Roanuz\\Product\\Model\\Resolver\\Product\\AttributeList")
+}
+
+type RZProductList {
+    group: String
+    attribute: [RZProductAttributes]
 }
 
 type RZProductAttributes {
-    group: String
-    attribute: [RZProductSpecifications]
-}
-
-type RZProductSpecifications {
     code: String
     label: String
     value: String
