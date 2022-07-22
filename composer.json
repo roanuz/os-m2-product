@@ -1,0 +1,29 @@
+{
+  "name": "roanuz/os-m2-product",
+  "description": "Roanuz Product",
+  "type": "magento2-module",
+  "version": "0.0.2",
+  "license": [
+      "OSL-3.0",
+      "AFL-3.0"
+  ],
+  "require": {
+      "php": "~7.4.0"
+  },
+  "authors": [
+      {
+          "name": "Roanuz",
+          "email": "support@roanuz.com",
+          "homepage": "https://www.roanuz.com/",
+          "role": "Developer"
+      }
+  ],
+  "autoload": {
+      "files": [
+          "registration.php"
+      ],
+      "psr-4": {
+        "Roanuz\\Product\\": ""
+      }
+  }
+}
